@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:clickable="false"
+        android:background="@color/mediconear_white">
+
+        <ImageView
+            android:id="@+id/signin_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/commonui_onboarding_icon_height"
+            android:layout_marginTop="@dimen/commonui_onboarding_icon_margin_top"
+            android:src="@drawable/ic_mediconear_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/signin_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_marginTop="160dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="16dp"
+            android:textSize="@dimen/commonui_text_size"
+            android:background="@drawable/bg_edit_text_rounded"
+            android:textColorHint="@color/mediconear_68_purple"
+            android:maxLines="1"
+            android:textColor="@color/mediconear_purple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signin_icon" />
+
+        <EditText
+            android:id="@+id/signin_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textPassword"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_marginTop="30dp"
+            android:hint="Password"
+            android:maxLines="1"
+            android:textSize="@dimen/commonui_text_size"
+            android:paddingStart="16dp"
+            android:background="@drawable/bg_edit_text_rounded"
+            android:textColorHint="@color/mediconear_68_purple"
+            android:textColor="@color/mediconear_purple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signin_email" />
+
+        <TextView
+            android:id="@+id/signin_continue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/bg_rounded_purple_button"
+            android:gravity="center"
+            android:enabled="false"
+            android:text="Sign in"
+            android:textColor="@color/mediconear_white"
+            android:textSize="@dimen/commonui_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signin_password" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+

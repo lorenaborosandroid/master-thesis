@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="userrole_message">You can use this app as a patient to find doctors which suit you most, or you can sign in as a doctor to manage your patients list.</string>
+    <string name="userrole_patient">Continue as Patient</string>
+    <string name="userrole_doctor">Continue as Doctor</string>
+</resources>

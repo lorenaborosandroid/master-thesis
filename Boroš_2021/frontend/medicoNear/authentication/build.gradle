@@ -1,0 +1,16 @@
+apply plugin: 'com.android.library'
+
+apply from: "$rootDir/buildSrc/src/CommonAndroid.gradle"
+
+dependencies {
+    implementation project(":core")
+    implementation project(":coreui")
+    implementation project(":commonui")
+    implementation project(":navigation")
+    implementation project(":biometricslib")
+    implementation project(":sessionlib")
+
+    implementation Layout.constraintLayout
+    implementation UI.materialComponents
+    implementation Security.cryptography
+}

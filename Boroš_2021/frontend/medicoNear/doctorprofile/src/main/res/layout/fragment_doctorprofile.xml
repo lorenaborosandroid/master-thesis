@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/mediconear_white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:clickable="false"
+        android:background="@color/mediconear_white">
+
+        <ImageView
+            android:id="@+id/doctorprofile_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/commonui_onboarding_icon_height"
+            android:layout_marginTop="@dimen/commonui_onboarding_icon_margin_top"
+            android:src="@drawable/ic_mediconear_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/doctorprofile_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/doctorprofile_icon"
+            android:layout_marginStart="@dimen/commonui_margin_horizontal"
+            android:layout_marginTop="20dp"
+            tools:text="My profile"
+            android:textSize="30sp"
+            android:textColor="@color/mediconear_purple" />
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/doctorprofile_email"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            app:titleText="Email"
+            app:layout_constraintTop_toBottomOf="@id/doctorprofile_title"/>
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/doctorprofile_ime"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            app:titleText="First name"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/doctorprofile_email"/>
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/doctorprofile_prezime"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            app:titleText="Last name"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/doctorprofile_ime"/>
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/doctorprofile_oib"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            app:titleText="Personal identification number"
+            app:layout_constraintTop_toBottomOf="@id/doctorprofile_prezime"/>
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/doctorprofile_kontakt_broj"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            app:titleText="Phone number"
+            app:layout_constraintTop_toBottomOf="@id/doctorprofile_oib"/>
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/doctorprofile_datum_rodjenja"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            app:titleText="Date of birth"
+            app:layout_constraintTop_toBottomOf="@id/doctorprofile_kontakt_broj"/>
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/doctorprofile_naziv_ordinacije"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            app:titleText="Doctor's office name"
+            app:layout_constraintTop_toBottomOf="@id/doctorprofile_datum_rodjenja"/>
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/doctorprofile_radno_vrijeme"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            app:titleText="Working hours"
+            app:layout_constraintTop_toBottomOf="@id/doctorprofile_naziv_ordinacije"/>
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/doctorprofile_adresa"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            app:titleText="Address"
+            app:layout_constraintTop_toBottomOf="@id/doctorprofile_radno_vrijeme"/>
+
+        <TextView
+            android:id="@+id/doctorprofile_continue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_rounded_purple_button"
+            android:gravity="center"
+            android:enabled="true"
+            android:text="Save"
+            android:textColor="@color/mediconear_white"
+            android:textSize="@dimen/commonui_text_size"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/doctorprofile_adresa" />
+
+        <TextView
+            android:id="@+id/doctorprofile_signUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_rounded_purple_button"
+            android:gravity="center"
+            android:enabled="true"
+            android:text="Sign up"
+            android:textColor="@color/mediconear_white"
+            android:textSize="@dimen/commonui_text_size"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/doctorprofile_adresa" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

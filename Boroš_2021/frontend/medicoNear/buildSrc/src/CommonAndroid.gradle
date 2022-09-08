@@ -1,0 +1,83 @@
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+def versionMajor = 0
+def versionMinor = 1
+def versionPatch = 0
+
+android {
+
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        archivesBaseName = "Seed-$versionName"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11.toString()
+    }
+
+
+    buildTypes {
+        debug {
+            versionNameSuffix "-debug"
+
+            ext.enableCrashlytics = false
+            ext.alwaysUpdateBuildId = false
+
+            tasks.withType(Test) { enabled = false }
+            //10.0.2.2:8080
+            //192.168.1.85:8080
+            buildConfigField "String", "BASE_API_URL", '"https:192.168.43.187:8080/"'
+
+            aaptOptions.cruncherEnabled = false // Disable png crunching
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+    implementation Kotlin.stdLib
+    implementation Kotlin.coreKtx
+
+    kapt(Serialization.moshi_codegen)
+    implementation Serialization.moshi
+    implementation Serialization.moshiAdapters
+    implementation Android.appCompat
+
+    implementation DI.koin
+    implementation DI.koinViewModel
+
+    implementation Log.timber
+
+    implementation RxJava.core
+    implementation RxJava.android
+
+    implementation Retrofit.core
+    implementation Retrofit.rxAdapter
+    implementation Retrofit.moshiConverter
+    implementation Retrofit.loggingInterceptor
+
+    testImplementation JUnit.core
+    androidTestImplementation JUnit.ext
+    androidTestImplementation Espresso.core
+}

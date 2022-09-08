@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="commonui_splash_icon_width">370dp</dimen>
+    <dimen name="commonui_splash_icon_height">120dp</dimen>
+    <dimen name="commonui_button_radius">999dp</dimen>
+    <dimen name="commonui_button_height">50dp</dimen>
+    <dimen name="commonui_onboarding_icon_height">50dp</dimen>
+    <dimen name="commonui_onboarding_icon_margin_top">20dp</dimen>
+    <dimen name="commonui_margin_horizontal">30dp</dimen>
+    <dimen name="commonui_text_size">16sp</dimen>
+    <dimen name="commonui_horizontal_decoration">10dp</dimen>
+</resources>

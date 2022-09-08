@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mediconear_white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:clickable="false"
+        android:background="@color/mediconear_white">
+
+        <ImageView
+            android:id="@+id/signup_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/commonui_onboarding_icon_height"
+            android:layout_marginTop="@dimen/commonui_onboarding_icon_margin_top"
+            android:src="@drawable/ic_mediconear_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/signup_createAccountTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signup_icon"
+            android:layout_marginStart="@dimen/commonui_margin_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="Create account"
+            android:textSize="30sp"
+            android:textColor="@color/mediconear_purple" />
+
+        <TextView
+            android:id="@+id/signup_createAccountMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signup_createAccountTitle"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/mediconear_purple"
+            android:textSize="18sp"
+            android:text="@string/signup_create_account_message"/>
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/signup_email"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            app:titleText="Email"
+            app:layout_constraintTop_toBottomOf="@id/signup_createAccountMessage"/>
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/signup_lozinka"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            app:titleText="Password"
+            app:layout_constraintTop_toBottomOf="@id/signup_email"/>
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/signup_ime"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            app:titleText="First name"
+            app:layout_constraintTop_toBottomOf="@id/signup_lozinka"/>
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/signup_prezime"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            app:titleText="Last name"
+            app:layout_constraintTop_toBottomOf="@id/signup_ime"/>
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/signup_oib"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            app:titleText="Personal identification number"
+            app:layout_constraintTop_toBottomOf="@id/signup_prezime"/>
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/signup_kontakt_broj"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            app:titleText="Phone number"
+            app:layout_constraintTop_toBottomOf="@id/signup_oib"/>
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/signup_mbo"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            app:titleText="Insurance number"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/signup_kontakt_broj"/>
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/signup_naziv_ordinacije"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            app:titleText="Doctor's office name"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/signup_mbo"/>
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/signup_radno_vrijeme"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            app:titleText="Working hours"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/signup_naziv_ordinacije"/>
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/signup_adresa"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            app:titleText="Address"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/signup_radno_vrijeme"/>
+
+        <com.mediconear.commonui.ui.UserDataFieldView
+            android:id="@+id/signup_datum_rodjenja"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            app:titleText="Date of birth"
+            app:layout_constraintTop_toBottomOf="@id/signup_adresa"/>
+
+        <TextView
+            android:id="@+id/signup_continue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_rounded_purple_button"
+            android:gravity="center"
+            android:enabled="true"
+            android:text="Sign up"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/mediconear_white"
+            android:textSize="@dimen/commonui_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signup_datum_rodjenja"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

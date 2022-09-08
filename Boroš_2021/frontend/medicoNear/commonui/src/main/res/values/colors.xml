@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mediconear_white">#FFFFFF</color>
+    <color name="mediconear_purple">#200C44</color>
+    <color name="mediconear_68_purple">#AD000C44</color>
+    <color name="mediconear_light_purple">#200C50</color>
+    <color name="commonui_ripple_background_color">#C3C3C3</color>
+    <color name="commonui_background_gray">#F5F7F9</color>
+    <color name="commonui_divider_color">#C3C3C3</color>
+</resources>

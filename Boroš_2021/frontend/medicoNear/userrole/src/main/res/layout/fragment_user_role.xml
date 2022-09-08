@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mediconear_white">
+
+    <ImageView
+        android:id="@+id/userrole_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/commonui_onboarding_icon_height"
+        android:layout_marginTop="@dimen/commonui_onboarding_icon_margin_top"
+        android:src="@drawable/ic_mediconear_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userrole_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+        android:gravity="center"
+        android:text="@string/userrole_message"
+        android:textColor="@color/mediconear_purple"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userrole_patient"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+        android:layout_marginTop="@dimen/userrole_patient_margin_top"
+        android:background="@drawable/bg_rounded_purple_button"
+        android:gravity="center"
+        android:text="@string/userrole_patient"
+        android:textColor="@color/mediconear_white"
+        android:textSize="@dimen/commonui_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userrole_title" />
+
+    <TextView
+        android:id="@+id/userrole_doctor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/commonui_margin_horizontal"
+        android:layout_marginTop="@dimen/userrole_doctor_margin_top"
+        android:background="@drawable/bg_rounded_white_buton"
+        android:gravity="center"
+        android:text="@string/userrole_doctor"
+        android:textColor="@color/mediconear_purple"
+        android:textSize="@dimen/commonui_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userrole_patient" />
+</androidx.constraintlayout.widget.ConstraintLayout>

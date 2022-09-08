@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/mediconear_white" />
+
+    <item
+        android:width="@dimen/commonui_splash_icon_width"
+        android:height="@dimen/commonui_splash_icon_height"
+        android:drawable="@drawable/ic_mediconear_icon"
+        android:gravity="center" />
+</layer-list>

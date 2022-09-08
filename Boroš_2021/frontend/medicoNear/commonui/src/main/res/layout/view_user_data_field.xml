@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/commonui_user_data_field_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/mediconear_purple"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        tools:text="Naziv ordinacije"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/commonui_user_data_field"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="textEmailAddress"
+        android:textSize="14sp"
+        android:background="@drawable/bg_edit_text_rounded"
+        android:textColorHint="@color/mediconear_68_purple"
+        android:layout_marginHorizontal="6dp"
+        android:maxLines="1"
+        android:paddingStart="16dp"
+        android:layout_marginTop="5dp"
+        tools:text="Petar"
+        android:textColor="@color/mediconear_purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/commonui_user_data_field_title"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

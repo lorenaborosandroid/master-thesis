@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mediconear_white">
+
+    <ImageView
+        android:id="@+id/pin_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@id/pin_mediconearIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/pin_mediconearIcon" />
+
+    <ImageView
+        android:id="@+id/pin_mediconearIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/commonui_onboarding_icon_height"
+        android:layout_marginTop="@dimen/commonui_onboarding_icon_margin_top"
+        android:src="@drawable/ic_mediconear_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pin_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:paddingHorizontal="30dp"
+        android:text="Enter MedicoNear passcode"
+        android:textColor="@color/mediconear_purple"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pin_mediconearIcon" />
+
+    <TextView
+        android:id="@+id/pin_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:paddingHorizontal="30dp"
+        android:text="For patient's sensitive data safety, 6-digit passcode for this device is required."
+        android:textColor="@color/mediconear_purple"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pin_title" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/pin_passcode"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="90dp"
+        android:textColor="@color/mediconear_purple"
+        android:background="@drawable/bg_rounded_white_buton"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:paddingHorizontal="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pin_subtitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

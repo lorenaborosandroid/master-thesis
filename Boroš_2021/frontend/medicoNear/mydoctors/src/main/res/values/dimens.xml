@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mydoctors_recycler_view_horizontal_decoration">10dp</dimen>
+</resources>

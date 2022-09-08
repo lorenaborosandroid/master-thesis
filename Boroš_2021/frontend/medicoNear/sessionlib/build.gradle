@@ -1,0 +1,16 @@
+apply plugin: 'com.android.library'
+
+apply from: "$rootDir/buildSrc/src/CommonAndroid.gradle"
+
+dependencies {
+
+    implementation project(":core")
+    implementation project(":commonui")
+    implementation project(":coreui")
+    implementation project(":navigation")
+
+    implementation Retrofit.core
+    implementation Retrofit.rxAdapter
+    implementation Retrofit.moshiConverter
+    implementation Retrofit.loggingInterceptor
+}

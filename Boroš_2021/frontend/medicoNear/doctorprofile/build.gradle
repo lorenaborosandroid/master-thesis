@@ -1,0 +1,20 @@
+apply plugin: 'com.android.library'
+
+apply from: "$rootDir/buildSrc/src/CommonAndroid.gradle"
+
+dependencies {
+
+    implementation project(":core")
+    implementation project(":commonui")
+    implementation project(":coreui")
+    implementation project(":navigation")
+    implementation project(":sessionlib")
+    implementation project(":doctorslib")
+    implementation project(":patientdoctorsignup")
+    implementation project(":patientlib")
+    implementation project(":specializationtypelib")
+
+    implementation Layout.recyclerView
+    implementation Layout.constraintLayout
+    implementation UI.materialComponents
+}

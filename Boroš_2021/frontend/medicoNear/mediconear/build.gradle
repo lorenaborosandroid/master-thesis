@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+apply from: "$rootDir/buildSrc/src/CommonAndroid.gradle"
+
+android {
+    defaultConfig {
+        applicationId = "com.mediconear"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(":core")
+    implementation project(":coreui")
+    implementation project(":commonui")
+    implementation project(":navigation")
+    implementation project(":landing")
+    implementation project(":signin")
+    implementation project(":signup")
+    implementation project(":patientprofile")
+    implementation project(":doctorprofile")
+    implementation project(":doctorslib")
+    implementation project(":mypatients")
+    implementation project(":mydoctors")
+    implementation project(":search")
+    implementation project(":dashboard")
+    implementation project(":patientlib")
+    implementation project(":userrole")
+    implementation project(":specializationtypepicker")
+    implementation project(":specializationtypelib")
+    implementation project(":pin")
+    implementation project(":biometricslib")
+    implementation project(":authentication")
+    implementation project(":sessionlib")
+    implementation project(":patientdoctorsignup")
+
+    implementation Layout.fragmentContainer
+}

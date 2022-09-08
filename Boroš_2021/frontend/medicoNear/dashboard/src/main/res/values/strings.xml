@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dashboard_search">Search</string>
+    <string name="dashboard_my_patients">My patients</string>
+    <string name="dashboard_my_doctors">My doctors</string>
+</resources>
